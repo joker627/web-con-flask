@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>En Construcción</title>
+    <style>
+        :root {
+            --primary: #2563eb;
+            --text: #333;
+            --white: #fff;
+            --background: #f1f5f9;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html, body {
+            height: 100%;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: var(--background);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        nav {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: #059e1f;
+            display: flex;
+            justify-content: center;
+            padding: 12px 0;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 16px;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #cce5cc;
+        }
+
+        .container {
+            background: var(--white);
+            border-radius: 12px;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+            padding: 15px;
+            max-width: 600px;
+            width: 90%;
+            text-align: center;
+            animation: fadeIn 0.8s ease-out;
+            margin-top: 60px;
+            max-height: calc(100vh - 100px);
+            overflow: auto;
+        }
+
+        h1 {
+            font-size: 2rem;
+            color: var(--primary);
+            margin-bottom: 12px;
+        }
+
+        p {
+            color: var(--text);
+            margin-bottom: 16px;
+            line-height: 1.5;
+        }
+
+        img {
+            max-width: 100%;
+            max-height: 200px;
+            border-radius: 8px;
+            border: 3px solid #059e1f;
+        }
+
+        .footer {
+            margin-top: 16px;
+            font-size: 0.9rem;
+            color: var(--primary);
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-height: 600px) {
+            img {
+                max-height: 150px;
+            }
+            h1 {
+                font-size: 1.6rem;
+            }
+            p {
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <a href="{{ url_for('home') }}" class="nav-link">Inicio</a>
+    </nav>
+
+    <div class="container">
+        <h1>¡Página en Construcción!</h1>
+        <p>
+            Esta sección del sitio web todavía está siendo trabajada.<br />
+            Estamos afinando los detalles para ofrecerte la mejor experiencia.
+        </p>
+        <img src="{{ url_for('static', filename='images/404.png') }}" alt="En Construcción">
+        <div class="footer">
+            Vuelve pronto para descubrir lo nuevo que tenemos preparado.
+        </div>
+    </div>
+</body>
+
+</html>
