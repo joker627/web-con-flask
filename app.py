@@ -2,6 +2,10 @@ from flask import Flask, render_template, request
 
 app = Flask(__name__)
 
+# -------------------------------
+# RUTAS DE AUTENTICACIÓN
+# -------------------------------
+
 @app.route('/register', methods=['GET', 'POST'])
 def register():
     if request.method == 'POST':
@@ -10,6 +14,7 @@ def register():
         print(f"Registrando: {username} - {password}")
         return 'Registro enviado'
     return render_template('register.html')
+
 
 @app.route('/login', methods=['GET', 'POST'])
 def login():
@@ -21,16 +26,21 @@ def login():
     return render_template('login.html')
 
 
-# rutas de navegacion
-@app.route("/")
+# -------------------------------
+# RUTAS DE NAVEGACIÓN PRINCIPAL
+# -------------------------------
+
+@app.route('/')
 def home():
-    return render_template("index.html")
+    return render_template('index.html')
 
-@app.route("/lenguajes")
+
+@app.route('/lenguajes')
 def lenguajes():
-    return render_template("lenguajes.html")
+    return render_template('lenguajes.html')
 
-@app.route("/contacto", methods=['GET', 'POST']) 
+
+@app.route('/contacto', methods=['GET', 'POST'])
 def contacto():
     if request.method == 'POST':
         nombre = request.form['nombre']
@@ -44,21 +54,26 @@ def contacto():
         print(f"Mensaje:\n{mensaje}\n---")
 
         return "¡Mensaje recibido con éxito! Gracias por contactarnos."
-    else:
-        return render_template("contacto.html")
+    return render_template('contacto.html')
 
-@app.route("/politica")
+
+@app.route('/politica')
 def politica():
-    return render_template("politica.html")
+    return render_template('politica.html')
 
 
-# Manejador de errores 404
+# -------------------------------
+# ERRORES PERSONALIZADOS
+# -------------------------------
+
 @app.errorhandler(404)
 def page_not_found(error):
     return render_template('404.html'), 404
 
+
+# -------------------------------
+# EJECUCIÓN DE LA APP
+# -------------------------------
+
 if __name__ == '__main__':
     app.run(debug=True)
-
-
-

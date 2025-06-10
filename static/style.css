@@ -95,7 +95,7 @@
     padding: 10px 5px;   
     display: flex;       
     flex-direction: column; 
-    border-radius: 0 5px 5px 0; 
+    border-radius: 0 6px 6px 0; 
     z-index: 1000;       
     box-shadow: 2px 0 5px rgba(0,0,0,0.3);
 }
@@ -107,6 +107,9 @@
     margin: 8px 0;
     transition: color 0.3s ease, transform 0.3s ease;
     display: block;
+}
+.social-sidebar a:hover {
+    transform: translateX(5px);
 }
 
 .social-sidebar a .fa-facebook-f:hover { color: #3b5998; }

@@ -1,0 +1,172 @@
+    {% extends "menu.html" %}
+
+    {% block content %}
+    
+    <!-- inicio-section -->
+
+
+    <section class="inicio-section">
+        <div class="inicio-contenido">
+            <h1 class="inicio-titulo">Desbloquea tu Potencial en el Mundo de la Programación</h1>
+            <p class="inicio-descripcion">
+                Explora nuestra gran colección de tutoriales, comparaciones detalladas y las últimas noticias del
+                desarrollo web y más allá. ¡Empieza tu viaje hoy!
+            </p>
+            <a href="#tutoriales" class="inicio-boton">Explorar Tutoriales</a>
+        </div>
+        <div class="inicio-contenido2">
+        <img src="{{ url_for('static', filename='images/inicio.png') }}" alt="Imagen de programación" class="inicio-imagen" />
+        </div>
+    </section>
+
+
+    <!-- recursos-section -->
+    <section class="recursos-section">
+        <h2 class="recursos-titulo">Aprende a Codificar con Nuestros Recursos</h2>
+        <p class="recursos-descripcion">Sumérgete en el fascinante mundo de la programación...</p>
+
+        <div class="recursos-container">
+            <article class="recurso-card">
+                <img class="recurso-imagen" src="{{ url_for('static', filename='images/python.png') }}" alt="Tutorial de Python" />
+                <h3 class="recurso-titulo">Introducción a Python</h3>
+                <p class="recurso-texto">Curso completo para empezar con Python.</p>
+                <a class="recurso-enlace" href="python-basico.html">Ver Tutorial</a>
+            </article>
+
+            <article class="recurso-card">
+                <img class="recurso-imagen" src="{{ url_for('static', filename='images/comparativa.png') }}" alt="Comparación JS vs Python" />
+                <h3 class="recurso-titulo">Comparativa JS vs Python</h3>
+                <p class="recurso-texto">Analizamos fortalezas y debilidades.</p>
+                <a class="recurso-enlace" href="comparacion-js-python.html">Leer Comparativa</a>
+            </article>
+
+            <article class="recurso-card">
+                <img class="recurso-imagen" src="{{ url_for('static', filename='images/react.png') }}" alt="Noticia sobre React" />
+                <h3 class="recurso-titulo">Novedades en React</h3>
+                <p class="recurso-texto">Últimas noticias de la biblioteca.</p>
+                <a class="recurso-enlace" href="noticia-react.html">Leer Noticia</a>
+            </article>
+        </div>
+    </section>
+
+    
+    <!-- lenguajes-section -->
+    <section class="lenguajes-section">
+        <h3 class="lenguajes-titulo">Explora los Lenguajes Más Populares</h3>
+        <p class="lenguajes-descripcion">Descubre información esencial y enlaces a recursos clave...</p>
+
+        <ol class="lenguajes-lista">
+            <li class="lenguaje-item">
+                <a href="python.html" class="lenguaje-enlace">Python</a>
+                <img src="{{ url_for('static', filename='images/python.png') }}" alt="Logo de Python" class="lenguaje-logo" />
+            </li>
+            <li class="lenguaje-item">
+                <a href="javascript.html" class="lenguaje-enlace">JavaScript</a>
+                <img src="{{ url_for('static', filename='images/js.png') }}" alt="Logo de JavaScript" class="lenguaje-logo" />
+            </li>
+            <li class="lenguaje-item">
+                <a href="css.html" class="lenguaje-enlace">CSS</a>
+                <img src="{{ url_for('static', filename='images/css.png') }}" alt="Logo de CSS" class="lenguaje-logo" />
+            </li>
+            <li class="lenguaje-item">
+                <a href="html.html" class="lenguaje-enlace">HTML</a>
+                <img src="{{ url_for('static', filename='images/html.png') }}" alt="Logo de HTML" class="lenguaje-logo" />
+            </li>
+            <li class="lenguaje-item">
+                <a href="java.html" class="lenguaje-enlace">Java</a>
+                <img src="{{ url_for('static', filename='images/java.png') }}" alt="Logo de Java" class="lenguaje-logo" />
+            </li>
+            <li class="lenguaje-item">
+                <a href="csharp.html" class="lenguaje-enlace">C#</a>
+                <img src="{{ url_for('static', filename='images/c.png') }}" alt="Logo de C#" class="lenguaje-logo" />
+            </li>
+        </ol>
+
+        <p><a class="lenguajes-ver-todos" href="{{url_for('lenguajes')}}">Ver todos los lenguajes</a></p>
+    </section>
+
+    <!-- tutoriales-section -->
+    <section id="tutoriales" class="tutoriales-section">
+        <h3 class="tutoriales-titulo">Nuestros Tutoriales Más Recientes</h3>
+        <p class="tutoriales-descripcion">Encuentra guías detalladas para aprender desde los fundamentos hasta técnicas
+            avanzadas.</p>
+
+        <article class="tutorial-card">
+            <img class="tutorial-imagen" src="{{url_for('static', filename='images/html.png')}}" alt="Tutorial de HTML5" />
+            <h4 class="tutorial-subtitulo">Tutorial: Fundamentos de HTML5</h4>
+            <p class="tutorial-texto">Aprende la estructura básica de cualquier página web.</p>
+            <a class="tutorial-enlace" href="tutorial-html5.html">Leer más</a>
+        </article>
+
+        <article class="tutorial-card">
+            <img class="tutorial-imagen" src="{{url_for('static',filename='images/js.png')}}" alt="Tutorial de variables en JS" />
+            <h4 class="tutorial-subtitulo">Tutorial: Introducción a las Variables en JavaScript</h4>
+            <p class="tutorial-texto">Comprende cómo almacenar y manipular datos en JavaScript.</p>
+            <a class="tutorial-enlace" href="tutorial-js-variables.html">Leer más</a>
+        </article>
+
+        <p><a class="tutoriales-ver-todos" href="tutoriales.html">Explorar todos los tutoriales</a></p>
+    </section>
+
+    <!-- comparaciones-section -->
+             <h3>Comparaciones de Lenguajes y Tecnologías</h3>
+        <p>Analizamos las diferencias y similitudes para ayudarte a elegir la mejor opción.</p>
+    <section class="comparaciones-section">
+
+
+        <article class="comparacion-card">
+            <img src="{{url_for('static', filename='images/css-comparativa.png')}}" alt="Comparación Bootstrap vs Tailwind" class="comparacion-imagen" />
+            <div>
+                <h4 class="comparacion-subtitulo">Comparativa: Frameworks CSS - Bootstrap vs. Tailwind CSS</h4>
+                <p class="comparacion-texto">Un análisis de dos de los frameworks de diseño más populares.</p>
+                <a href="comparacion-bootstrap-tailwind.html" class="comparacion-enlace">Leer más</a>
+            </div>
+        </article>
+
+        <article class="comparacion-card">
+            <img src="{{url_for('static',filename='images/nod.jsVSdjango.png')}}" alt="Comparación Node.js vs Django" class="comparacion-imagen" />
+            <div>
+                <h4 class="comparacion-subtitulo">Comparativa: Entornos de Desarrollo Backend - Node.js vs. Django</h4>
+                <p class="comparacion-texto">¿Cuál se adapta mejor a tu próximo proyecto?</p>
+                <a href="comparacion-nodejs-django.html" class="comparacion-enlace">Leer más</a>
+            </div>
+        </article>
+
+        <p><a href="comparaciones.html" class="comparacion-ver-todos">Ver todas las comparaciones</a></p>
+    </section>
+
+    <!-- noticias-section -->
+    <section class="noticias-section">
+        <h3>Últimas Noticias del Mundo de la Programación</h3>
+
+        <div class="noticia-card">
+            <img src="{{url_for('static', filename='images/angular.png')}}" alt="Noticia sobre Angular" class="noticia-imagen" />
+            <div class="noticia-contenido">
+                <h4 class="noticia-titulo">Lanzamiento de Angular</h4>
+                <p class="noticia-texto">Descubre las nuevas características y mejoras.</p>
+                <time datetime="2025-05-10" class="noticia-fecha">10 mayo 2025</time>
+            </div>
+        </div>
+
+        <div class="noticia-card">
+            <img src="{{url_for('static', filename='images/IA.png')}}" alt="Noticia sobre IA" class="noticia-imagen" />
+            <div class="noticia-contenido">
+                <h4 class="noticia-titulo">Tendencias en IA para 2025</h4>
+                <p class="noticia-texto">Exploramos las tecnologías emergentes en el campo de la IA.</p>
+                <time datetime="2025-05-05" class="noticia-fecha">5 mayo 2025</time>
+            </div>
+        </div>
+
+        <p><a href="noticias.html" class="noticia-ver-todas">Ver todas las noticias</a></p>
+    </section>
+
+    <!-- comunidad-section -->
+    <section class="comunidad-section">
+        <h3>Únete a Nuestra Comunidad de Programadores</h3>
+        <p>Comparte tus dudas, aprende de otros y colabora en proyectos.</p>
+        <a href="foro.html" class="comunidad-boton">Ir al Foro</a>
+    </section>
+
+
+
+    {% endblock %}
