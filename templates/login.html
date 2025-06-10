@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Login</title>
+</head>
+<link rel="stylesheet" href="static/style.css">
+
+<body>
+    <section class="auth-section">
+        <div class="auth-container">
+            <h2 class="auth-titulo">Iniciar sesión</h2>
+            <form class="auth-form" action="/login" method="POST">
+                <input class="auth-input" type="email" name="email" placeholder="Correo electrónico" required>
+                <input class="auth-input" type="password" name="password" placeholder="Contraseña" required>
+                <button class="auth-boton" type="submit">Entrar</button>
+            </form>
+            <div class="auth-link">
+                ¿No tienes una cuenta? <a href="/register">Regístrate</a>
+            </div>
+        </div>
+    </section>
+
+</body>
+
+</html>

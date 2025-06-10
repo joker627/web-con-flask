@@ -3,6 +3,88 @@
     padding: 0;
     /* background-color: #a5bcc9;*/
 }
+/*===================*/
+/* login-register    */
+/*===================*/
+
+.auth-section {
+    padding: 60px 20px;
+    background-color: #ece6e6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 90vh;
+}
+
+.auth-container {
+    background-color: #ffffff;
+    border: 2px solid #0b7710;
+    padding: 40px;
+    border-radius: 15px;
+    width: 100%;
+    max-width: 400px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.auth-titulo {
+    font-size: 28px;
+    color: #145c2f;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.auth-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.auth-input {
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #a5e6af;
+    border-radius: 8px;
+    font-size: 16px;
+    background-color: #f9f9f9;
+}
+
+.auth-input:focus {
+    outline: none;
+    border-color: #0b7710;
+    box-shadow: 0 0 5px rgba(11, 119, 16, 0.4);
+}
+
+.auth-boton {
+    background-color: #17a11e;
+    color: #ffffff;
+    padding: 12px;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.auth-boton:hover {
+    background-color: #ffffff;
+    color: #0b7710;
+    border: 2px solid #0b7710;
+}
+
+.auth-link {
+    margin-top: 15px;
+    text-align: center;
+    font-size: 14px;
+}
+
+.auth-link a {
+    color: #0b6623;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.auth-link a:hover {
+    color: #17a11e;
+}
 
 /* Estilos para la barra de redes social */
 .social-sidebar {

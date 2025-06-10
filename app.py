@@ -2,6 +2,25 @@ from flask import Flask, render_template, request
 
 app = Flask(__name__)
 
+@app.route('/register', methods=['GET', 'POST'])
+def register():
+    if request.method == 'POST':
+        username = request.form['username']
+        password = request.form['password']
+        print(f"Registrando: {username} - {password}")
+        return 'Registro enviado'
+    return render_template('register.html')
+
+@app.route('/login', methods=['GET', 'POST'])
+def login():
+    if request.method == 'POST':
+        username = request.form['username']
+        password = request.form['password']
+        print(f"Iniciando sesión: {username} - {password}")
+        return 'Inicio de sesión enviado'
+    return render_template('login.html')
+
+
 # rutas de navegacion
 @app.route("/")
 def home():
