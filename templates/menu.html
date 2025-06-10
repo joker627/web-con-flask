@@ -16,21 +16,17 @@
     <header class="main-header">
         <nav class="main-nav">
             <a href="{{ url_for('home') }}" class="nav-link">Inicio</a>
-            <a href="lenguaje" class="nav-link">Lenguajes</a>
-            <a href="tutoriales" class="nav-link">Tutoriales</a>
-            <a href="comparaciones" class="nav-link">Comparaciones</a>
-            <a href="noticias" class="nav-link">Noticias</a>
-            <a href="comunidad" class="nav-link">Comunidad</a>
-            <a href="contacto" class="nav-link">Contacto</a>
+            <a href="{{ url_for('login') }}" class="nav-link login-link">
+                <i class="fas fa-sign-in-alt"></i> Iniciar sesión
         </nav>
     </header>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
     <div class="social-sidebar">
         <a href="https://facebook.com/tucuenta"><i class="fab fa-facebook-f"></i></a>
         <a href="https://twitter.com/tucuenta"><i class="fab fa-twitter"></i></a>
         <a href="https://instagram.com/tucuenta"><i class="fab fa-instagram"></i></a>
         <a href="https://linkedin.com/in/tucuenta"><i class="fab fa-linkedin-in"></i></a>
-        </div>
+    </div>
     {% block content %}{% endblock %}
 
     <footer>
