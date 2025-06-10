@@ -1,0 +1,66 @@
+{% extends 'menu.html' %}
+{% block content %}
+  <section class="comparaciones-section">
+    <h3>Lenguajes de Programación Más Usados</h3>
+    <p>A continuación, exploramos los lenguajes más populares del desarrollo actual, con una breve descripción de sus usos y fortalezas.</p>
+
+    <article class="comparacion-card">
+      <img src="{{ url_for('static', filename='images/python.png') }}" alt="Logo Python" class="comparacion-imagen" />
+      <div>
+        <h3 class="comparacion-subtitulo">Python</h3>
+        <p class="comparacion-texto">Fácil de aprender, ideal para desarrollo web, análisis de datos, IA y automatización.</p>
+        <a href="python.html" class="comparacion-enlace">Explorar Python</a>
+      </div>
+    </article>
+
+    <article class="comparacion-card">
+      <img src="{{ url_for('static', filename='images/js.png') }}" alt="Comparación Bootstrap vs Tailwind" class="comparacion-imagen" />
+      <div>
+        <h3 class="comparacion-subtitulo">JavaScript</h3>
+        <p class="comparacion-texto">El lenguaje del navegador. Perfecto para hacer sitios interactivos y dinámicos.</p>
+        <a href="comparacion-bootstrap-tailwind.html" class="comparacion-enlace">Explorar JavaScript</a>
+      </div>
+    </article>
+
+    <article class="comparacion-card">
+      <img src="{{ url_for('static', filename='images/html.png') }}" alt="Logo CSS" class="comparacion-imagen" />
+      <div>
+      <h3 class="comparacion-subtitulo">HTML</h3>
+      <p class="comparacion-texto">Lenguaje de marcado que estructura el contenido de las páginas web.</p>
+      <a href="html.html" class="comparacion-enlace">Explorar HTML</a>
+      <div>
+    </article>
+
+
+    <article class="comparacion-card">
+      <img src="{{ url_for('static', filename='images/css.png') }}" alt="Logo CSS" class="comparacion-imagen" />
+      <div>
+      <h3 class="comparacion-subtitulo">CSS</h3>
+      <p class="comparacion-texto">Da estilo y presentación visual a tu contenido web. Fundamental junto con HTML.</p>
+      <a href="css.html" class="comparacion-enlace">Explorar CSS</a>
+      <div>
+    </article>
+
+    <article class="comparacion-card">
+      <img src="{{ url_for('static', filename='images/java.png') }}" alt="Logo Java" class="comparacion-imagen" />
+      <div>
+      <h3 class="comparacion-subtitulo">Java</h3>
+      <p class="comparacion-texto">Lenguaje robusto y multiplataforma, usado en sistemas empresariales y Android.</p>
+      <a href="java.html" class="comparacion-enlace">Explorar Java</a>
+      <div>
+    </article>
+
+    <article class="comparacion-card">
+      <img src="{{ url_for('static', filename='images/c.png') }}" alt="Logo C#" class="comparacion-imagen" />
+      <div>
+      <h3 class="comparacion-subtitulo">C#</h3>
+      <p class="comparacion-texto">Lenguaje de Microsoft, ideal para desarrollo de juegos y aplicaciones de escritorio.</p>
+      <a href="csharp.html" class="comparacion-enlace">Explorar C#</a>
+      </div>
+    </article>
+
+    <p class="lenguajes-footer">
+      ¿Quieres aprender más? Revisa también nuestras <a href="comparaciones.html">comparativas</a> y <a href="tutoriales.html">tutoriales</a>.
+    </p>
+  </section>
+{% endblock %}
